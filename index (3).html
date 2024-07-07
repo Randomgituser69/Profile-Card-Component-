@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap'); 
+    :root {
+      --Dark-cyan: hsl(185, 75%, 39%); 
+      --Very-dark-desaturated-blue: hsl(229, 23%, 23%); 
+      --Dark-grayish-blue: hsl(227, 10%, 46%);
+--Dark-gray: hsl(0, 0%, 59%);
+    }
+    * {
+      font-family: 'Kumbh Sans', sans-serif; 
+    } 
+    body {
+      background-color: hsl(185, 75%, 39%); 
+      display: grid; 
+      place-content: center;
+      place-items: center;
+      box-sizing: border-box;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    } 
+    .profile-card {
+      background-color: white;
+      width: 400px;
+      border-radius: 1em;
+    }
+    .profile-card-stats {
+      display: flex;
+      justify-content: space-between;
+    } 
+    .profile-card-info, .profile-card-image {
+      text-align: center;
+    } 
+    .user-info {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+    .profile-bg-image img{
+      border-radius: 1em 1em 0 0; 
+      width: 100%;
+    }
+    .profile-card-image img {
+      border-radius: 50%;
+    }
+    span {
+      font-weight: 400;
+    } 
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media (width < 768px) { 
+      main {
+    width: 50%; 
+    height: 50%;
+  }
+    }
+    @media (width >= 768px) {
+    main {
+    width: 100%; 
+    height: 100%;
+  }
+    }
+  </style>
+</head>
+<body>
+  <main>
+  <div class="profile-card" aria-label="profile">
+    <div class="profile-bg-image" aria-label="section">
+      <img src="bg-pattern-card.png" alt="background image of the card">
+    </div>
+    <div class="profile-card-image" aria-label="section">
+      <img src="IMG_20240706_181852.jpg" alt="image of vector">
+    </div>
+      <div class="user-info" aria-label="section">
+    <div class="profile-card-info" alt="information about the user">
+  <h2>Victor Crest<span>26</span></h2>
+  <p>London</p>
+  </div>
+    <div class="profile-card-stats" alt="statistics about the user">
+      <div class="followers" aria-label="section">
+  <h2>80K</h2>
+  <p>Followers</p>
+      </div>
+      <div class="likes" aria-label="section">
+  <h2>803K</h2>
+  <p>Likes</p>
+      </div>
+      <div class="photos" aria-label="section">
+  <h2>1.4K</h2>
+  <p>Photos</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>
