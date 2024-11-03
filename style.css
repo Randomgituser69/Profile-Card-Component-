@@ -70,6 +70,7 @@ body {
 .profile-card {
   display: flex;
   flex-direction: column;
+  position: relative;
   text-align: center;
   overflow: hidden;
   background-color: white;
@@ -84,21 +85,16 @@ body {
   font-weight: 700;
   color: var(--Very-dark-desaturated-blue);
 }
-.profile-card span, p {
+.profile-card .six, p {
   padding: 10px;
 }
-.profile-card span {
+.profile-card .six {
   font-size: 20px;
   font-weight: 400;
   color: var(--Dark-gray);
 }
 
-ul {
-  padding: 20px;
-  list-style: none;
-  font-weight: 700;
-  color: var(--Very-dark-desaturated-blue);
-}
+
 .stats-item {
   font-weight: 400;
   color: var(--Dark-gray);
@@ -107,12 +103,22 @@ span {
   font-size: 20px;
 }
 .profile-card::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
   background-image: url('bg-pattern-top.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .profile-card::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
   background-image: url('bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 picture {
   background-image: url("bg-pattern-card.svg");
@@ -121,12 +127,21 @@ picture {
   height: 130px;
   margin-bottom: 1em;
 }
- .stats {
+ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-top: 1px solid var(--Dark-gray);
   margin-top: 1em;
+  padding: 1rem;
+  gap: 2em;
+  list-style: none;
+  color: var(--Very-dark-desaturated-blue);
+}
+.stats {
+  display: block;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
 }
 img {
   justify-self: center;
