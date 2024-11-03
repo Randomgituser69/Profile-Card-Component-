@@ -65,7 +65,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 20px;
 }
 .profile-card {
   display: flex;
@@ -73,8 +73,38 @@ body {
   text-align: center;
   overflow: hidden;
   background-color: white;
-  max-width: 24rem;
+  max-width: 25rem;
+  margin-top: 4em;
   border-radius: 1em;
+  font-weight: 400;
+  color: var(--Dark-gray);
+}
+.profile-card h2 {
+  padding: 4px;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+}
+.profile-card span, p {
+  padding: 10px;
+}
+.profile-card span {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--Dark-gray);
+}
+
+ul {
+  padding: 20px;
+  list-style: none;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+}
+.stats-item {
+  font-weight: 400;
+  color: var(--Dark-gray);
+}
+span {
+  font-size: 20px;
 }
 .profile-card::before {
   background-image: url('bg-pattern-top.svg');
@@ -88,20 +118,23 @@ picture {
   background-image: url("bg-pattern-card.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100px;
+  height: 130px;
+  margin-bottom: 1em;
 }
  .stats {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 1px solid var(--Dark-gray);
+  margin-top: 1em;
 }
-.victor {
+img {
   justify-self: center;
   border: 5px solid white;
   width: 80px; 
-  height: 40px;
+  height: 80px;
   border-radius: 50%;
-  transform: translateY(85px);
+  transform: translateY(69px);
 }
 span {
   font-weight: 400;
