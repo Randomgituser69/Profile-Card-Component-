@@ -67,7 +67,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px; 
   font-size: 1.125rem;
 }
 .profile-card {
@@ -126,14 +126,15 @@ body::after {
   content: "";
   position: absolute;
   width: 1000px;
-  height: 900px;
+  height: 1000px;
   background-image: url("bg-pattern-bottom.svg");
   background-repeat: no-repeat;
   background-size: contain;
   transform: translate(50%, 50%);
-  left: 10%; 
-  right: -50%;
-  top: -60%;
+  left: 30%; 
+  right: 0;
+  top: 0;
+  bottom: 0;
   z-index: -1;
 }
 picture {
