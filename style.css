@@ -131,10 +131,10 @@ body::after {
   background-repeat: no-repeat;
   background-size: contain;
   transform: translate(50%, 50%);
-  left: 30%; 
+  left: 0; 
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 50%;
   z-index: -1;
 }
 picture {
