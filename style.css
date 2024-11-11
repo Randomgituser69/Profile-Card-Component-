@@ -61,6 +61,7 @@ h6 {
 }
 body {
   background-color: hsl(185, 75%, 39%);
+  font-size: 1.125rem;
 }
 main {
   display: flex;
@@ -68,16 +69,15 @@ main {
   align-items: center;
   justify-content: center;
   padding: 20px; 
-  font-size: 1.125rem;
 }
 .profile-card {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   position: relative;
   text-align: center;
   background-color: white;
-  max-width: 25rem;
-  margin-top: 6em;
+  max-width: 30rem;
+  margin-top: 2em;
   border-radius: 1em;
   font-weight: 400;
   color: var(--Dark-gray);
@@ -109,33 +109,24 @@ li {
 .six {
   font-size: 1.25rem;
 }
-body::before {
+.profile-card::before, .profile-card::after {
   content: "";
   position: absolute;
-  width: 1000px;
-  height: 1000px;
-  background-image: url("bg-pattern-top.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  background-size: auto;
   transform: translate(-50%, -50%);
-  right: 80%;
-  left: 0;
   z-index: -1;
 }
-body::after {
-  content: "";
-  position: absolute;
-  width: 1000px;
-  height: 1000px;
-  background-image: url("bg-pattern-bottom.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: translate(50%, 50%);
-  left: 0; 
-  right: 0;
+.profile-card::before {
   top: 0;
-  bottom: 50%;
-  z-index: -1;
+  left: 0; 
+  background:url('bg-pattern-top.svg') no-repeat bottom right;
+}
+.profile-card::after {
+  background: url("bg-pattern-bottom.svg") no-repeat top left;
+  left: 100%; 
+  top: 100%;
 }
 picture {
   border-top-left-radius: 5px;
@@ -148,7 +139,7 @@ picture {
 }
 ul {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   border-top: 1px solid var(--Dark-gray);
   margin-top: 1em;
